@@ -22,4 +22,10 @@ public:
 	unsigned int capacity();
 	bool empty();
 
+	char& at(unsigned int position);
+	char& back();
+	char& front();
+	char& operator[](unsigned int position);
+
+
 };

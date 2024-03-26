@@ -133,3 +133,27 @@ bool string::empty()
 	return false;
 }
 
+char& string::at(unsigned int position)
+{
+	if (position >= lengthStr)
+		throw std::out_of_range("Out of range");
+	return str[position];
+}
+
+char& string::back()
+{
+	return str[lengthStr - 1];
+}
+
+char& string::front()
+{
+	return str[0];
+}
+
+char& string::operator[](unsigned int position)
+{
+	if (position >= lengthStr)
+		throw std::out_of_range("Out of range");
+	return str[position];
+}
+
