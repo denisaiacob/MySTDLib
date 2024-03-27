@@ -1,5 +1,6 @@
 #pragma once
 class string {
+private:
 	char* str;
 	unsigned int lengthStr;
 	unsigned int capacityStr;
@@ -26,6 +27,14 @@ public:
 	char& back();
 	char& front();
 	char& operator[](unsigned int position);
-
+	string& append(const string& str);
+	string& append(unsigned int n, char c);
+	string& operator+= (const char* s);
+	void push_back(char c);
+	void pop_back();
+	void swap(string& str);
+	string& replace(unsigned int pos, unsigned int len, const string& str);
+	string& insert(unsigned int pos, const string& str);
+	string& insert(unsigned int pos, const string& str, unsigned int subpos, unsigned int sublen);
 
 };
